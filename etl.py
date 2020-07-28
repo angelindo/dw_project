@@ -17,7 +17,6 @@ def insert_tables(cur, conn):
     - Insert data to fact and dimensions tables from staging tables
     """
     for query in insert_table_queries:
-        print(query)
         cur.execute(query)
         conn.commit()
 
@@ -25,7 +24,9 @@ def insert_tables(cur, conn):
 def main():
     """
     - Connects to the redshift cluster defined on dwh.cfg
+    
     - Run function load_staging_tables()
+
     - Run function insert_tables()
     """
     config = configparser.ConfigParser()

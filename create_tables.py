@@ -24,7 +24,9 @@ def create_tables(cur, conn):
 def main():
     """
     - Connects to the redshift cluster defined on dwh.cfg
+    
     - Run function drop_tables()
+    
     - Run function create_tables()
     """
     config = configparser.ConfigParser()
